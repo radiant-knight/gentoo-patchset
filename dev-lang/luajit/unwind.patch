@@ -1,0 +1,13 @@
+diff --git a/src/Makefile b/src/Makefile
+index acbe0ca7..e3468291 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -220,7 +220,7 @@ TARGET_DYLIBNAME= libluajit-$(ABIVER).$(MAJVER).dylib
+ TARGET_DYLIBPATH= $(TARGET_LIBPATH)/$(TARGET_DYLIBNAME)
+ TARGET_DLLNAME= lua$(NODOTABIVER).dll
+ TARGET_DLLDOTANAME= libluajit-$(ABIVER).dll.a
+-TARGET_XSHLDFLAGS= -shared -fPIC -Wl,-soname,$(TARGET_SONAME)
++TARGET_XSHLDFLAGS= -shared -fPIC -Wl,-soname,$(TARGET_SONAME) -lunwind
+ TARGET_DYNXLDOPTS=
+ 
+ TARGET_LFSFLAGS= -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
